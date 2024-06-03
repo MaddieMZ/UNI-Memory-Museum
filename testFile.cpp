@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #include<iostream>
-
+//Comentario lindo UwU
 int main(void)
 {
     GLFWwindow* window;
