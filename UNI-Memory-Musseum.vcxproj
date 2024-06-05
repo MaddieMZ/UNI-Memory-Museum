@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\villa\OneDrive\Documentos\GitHub\UNI-Memory-Musseum\Dependencias;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\villa\OneDrive\Documentos\GitHub\UNI-Memory-Musseum\Dependencias\GLFW\lib-vc2022;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependencias;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencias\GLFW\lib-vc2022;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
