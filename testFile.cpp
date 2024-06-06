@@ -1,181 +1,60 @@
-
-//#include <GL/glew.h>
-#include <GLAD/glad.h>
-#include <GLM/glm.hpp>
+#include <iostream>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include<iostream>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-
-
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    glViewport(0, 0, width, height);
-}
 
 int main() {
-    // Inicialización de GLFW
-    if (!glfwInit()) {
-        std::cout << "Fallo en la inicialización de GLFW." << std::endl;
-        return -1;
-    }
 
-    // Configuración de GLFW
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	//Inicializamos la libreria GLFW
+	glfwInit();
 
-    // Creación de la ventana GLFW
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Mariposa Bonita", NULL, NULL);
-    if (window == NULL) {
-        std::cout << "Fallo en la creación de la ventana GLFW." << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    glfwMakeContextCurrent(window);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	//Le indicamos a GLFW con que version de OpenGL queremos trabajar. En este caso estamos usando OpenGL 3.7
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
-    // Carga de GLAD
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cout << "Fallo en la inicialización de GLAD." << std::endl;
-        return -1;
-    }
+	//Le indicamos GLFW que estamos usando solo funciones modernas
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    // Definición y compilación de shaders (vertex y fragment)
-    const char* vertexShaderSource = "#version 330 core\n"
-        "layout (location = 0) in vec3 aPos;\n"
-        "layout (location = 1) in vec3 aColor;\n"
-        "out vec3 ourColor;\n"
-        "uniform mat4 transform;\n"
-        "void main()\n"
-        "{\n"
-        "   gl_Position = transform * vec4(aPos, 1.0);\n"
-        "   ourColor = aColor;\n"
-        "}\0";
-    const char* fragmentShaderSource = "#version 330 core\n"
-        "in vec3 ourColor;\n"
-        "out vec4 FragColor;\n"
-        "void main()\n"
-        "{\n"
-        "   FragColor = vec4(ourColor, 1.0f);\n"
-        "}\n\0";
+	//Establecemos el nombre que deseamos aparezca en pantalla
+	GLFWwindow* window = glfwCreateWindow(800, 800, "Primitivas Graficas", NULL, NULL);
 
-    // Compilación de shaders
-    unsigned int vertexShader, fragmentShader;
-    int success;
-    char infoLog[512];
+	//En caso que la ventana no se pueda crear entonces enviamos un error.
+	if (window == NULL) {
 
-    // Vertex Shader
-    vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShader);
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        std::cout << "Error de compilación del Vertex Shader: " << infoLog << std::endl;
-    }
+		std::cout << "Fallo al tratar de crear la ventana usando GLFW" << std::endl;
+		glfwTerminate();
 
-    // Fragment Shader
-    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        std::cout << "Error de compilación del Fragment Shader: " << infoLog << std::endl;
-    }
+		return -1;
+	}
 
-    // Enlace de shaders en un programa de sombreado
-    unsigned int shaderProgram;
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if (!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        std::cout << "Error de enlace del Shader Program: " << infoLog << std::endl;
-    }
+	//Ponemos la ventana en el contexto actual de lo que queremos presentar en pantalla
+	glfwMakeContextCurrent(window);
 
-    // Liberar memoria de shaders (ya no necesitamos los shaders individuales)
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
+	//Cargamos GLAD para configurar OpenGL
+	gladLoadGL();
 
-    // Vértices de la mariposa (definidos como varios triángulos) y colores
-    float vertices[] = {
-        // Posiciones          // Colores
-        // Ala izquierda superior
-        -0.5f,  0.2f, 0.0f,   1.0f, 0.0f, 0.0f,
-        -0.2f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,
-        -0.3f,  0.1f, 0.0f,   1.0f, 0.0f, 0.0f,
+	//Especificamos el puerto de vision de OpenGL en la ventana. En este caso tiene las coordenadas desde x = 0, y = 0, hasta x = 800, y = 800
+	glViewport(0, 0, 800, 800);
 
-        // Ala izquierda inferior
-        -0.5f, -0.2f, 0.0f,   0.0f, 1.0f, 0.0f,
-        -0.2f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,
-        -0.3f, -0.1f, 0.0f,   0.0f, 1.0f, 0.0f,
+	//Especificamos el color de fondo
+	glClearColor(0.07f, 0.13f, 0.17f, 1.0f); //Podemos jugar con los parametros del color para obtener diferentes tonos del fondo en la ventana.
 
-        // Ala derecha superior
-         0.5f,  0.2f, 0.0f,   0.0f, 0.0f, 1.0f,
-         0.2f,  0.5f, 0.0f,   0.0f, 0.0f, 1.0f,
-         0.3f,  0.1f, 0.0f,   0.0f, 0.0f, 1.0f,
+	//Limpiamos el buffer de memoria con el valor que tiene y asignamos un nuevo color si acaso es necesario
+	glClear(GL_COLOR_BUFFER_BIT);
 
-         // Ala derecha inferior
-          0.5f, -0.2f, 0.0f,   1.0f, 1.0f, 0.0f,
-          0.2f, -0.5f, 0.0f,   1.0f, 1.0f, 0.0f,
-          0.3f, -0.1f, 0.0f,   1.0f, 1.0f, 0.0f
-    };
+	//Realizamos un intercambio entre el buffer trasero con el buffer delantero, es decir, entre el registro viejo de memoria con el nuevo registro de memoria
+	glfwSwapBuffers(window);
 
-    unsigned int VBO, VAO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
+	while (!glfwWindowShouldClose(window))
+	{
+		//Tomamos en consideracion todos los eventos que le puedan ser indicados a GLFW
+		glfwPollEvents();
+	}
 
-    glBindVertexArray(VAO);
+	//Eliminamos la ventana antes de que termine el programa
+	glfwDestroyWindow(window);
 
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+	//Terminamos de ejecutar GLFW antes de que termine el programa
+	glfwTerminate();
 
-    // Posiciones de los vértices
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
-    // Colores
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
-
-    // Bucle principal
-    while (!glfwWindowShouldClose(window)) {
-        // Procesamiento de entradas
-        glfwPollEvents();
-
-        // Renderizado
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // Calcular matriz de transformación de rotación
-        float angle = glfwGetTime() * 50.0f; // velocidad de rotación
-        glm::mat4 rotation = glm::rotate(glm::mat4(1.0f), glm::radians(angle), glm::vec3(0.0f, 0.0f, 1.0f));
-
-        // Obtener la ubicación de la matriz de transformación en el shader
-        unsigned int transformLoc = glGetUniformLocation(shaderProgram, "transform");
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(rotation));
-
-        // Dibujar la mariposa
-        glUseProgram(shaderProgram);
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 12);
-        glBindVertexArray(0);
-
-        // Intercambio de buffers y manejo de eventos
-        glfwSwapBuffers(window);
-    }
-
-    // Limpieza
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glfwTerminate();
-    return 0;
+	return 0;
 }
-
-
-
