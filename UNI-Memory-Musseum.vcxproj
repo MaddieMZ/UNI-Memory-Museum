@@ -153,6 +153,7 @@
     <ClCompile Include="VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camara.h" />
     <ClInclude Include="Dependencias\stb_image.h" />
     <ClInclude Include="EBO.h" />
     <ClInclude Include="shaderClass.h" />
