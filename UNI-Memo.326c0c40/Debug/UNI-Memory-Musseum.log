@@ -1,7 +1,2 @@
 ﻿  testFile.cpp
-  VBO.cpp
-  Generating Code...
-  glad.c
-  LINK : C:\Users\sergi\source\repos\UNI-Memory-Musseum\Debug\UNI-Memory-Musseum.exe not found or not built by the last incremental link; performing full link
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   UNI-Memory-Musseum.vcxproj -> C:\Users\sergi\source\repos\UNI-Memory-Musseum\Debug\UNI-Memory-Musseum.exe

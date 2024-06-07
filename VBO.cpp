@@ -1,4 +1,5 @@
 #include"VBO.h"
+//Le asignamos el buffer que va a almacenar los vertices y su tamaño
 VBO::VBO(GLfloat* vertices, GLsizeiptr size)
 {
 	glGenBuffers(1, &ID);

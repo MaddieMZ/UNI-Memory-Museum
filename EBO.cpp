@@ -1,4 +1,6 @@
 #include"EBO.h"
+
+//Se generan los bufferes que van a contener a la figura
 EBO::EBO(GLuint* indices, GLsizeiptr size)
 {
 	glGenBuffers(1, &ID);

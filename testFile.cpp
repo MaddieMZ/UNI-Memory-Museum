@@ -61,10 +61,12 @@ int main()
 	EBO EBO1(indices, sizeof(indices));
 	// Links VBO to VAO
 	VAO1.LinkVBO(VBO1, 0);
+	
 	// Unbind all to prevent accidentally modifying them
 	VAO1.Unbind();
-	VBO1.Unbind();
 	EBO1.Unbind();
+	VBO1.Unbind();
+	
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
