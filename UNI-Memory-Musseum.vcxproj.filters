@@ -82,6 +82,9 @@
     <None Include="ligth.frag">
       <Filter>Resource Files\shaders</Filter>
     </None>
+    <None Include="light.vert">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="ladrillo.jpg">
