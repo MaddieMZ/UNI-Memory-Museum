@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\UNI-Memory-Musseum\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|D:\\UNI-Memory-Musseum\\ligth.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|solutionrelative:ligth.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|D:\\UNI-Memory-Musseum\\Camara.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|solutionrelative:Camara.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -22,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "testFile.cpp",
               "DocumentMoniker": "D:\\UNI-Memory-Musseum\\testFile.cpp",
               "RelativeDocumentMoniker": "testFile.cpp",
@@ -35,12 +39,11 @@
               "ViewState": "AQIAAE4AAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-03T14:31:29.621Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Camara.h",
               "DocumentMoniker": "D:\\UNI-Memory-Musseum\\Camara.h",
               "RelativeDocumentMoniker": "Camara.h",
@@ -49,12 +52,11 @@
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-07T05:20:26.345Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Camara.cpp",
               "DocumentMoniker": "D:\\UNI-Memory-Musseum\\Camara.cpp",
               "RelativeDocumentMoniker": "Camara.cpp",
@@ -63,6 +65,20 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-07T05:21:03.664Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ligth.frag",
+              "DocumentMoniker": "D:\\UNI-Memory-Musseum\\ligth.frag",
+              "RelativeDocumentMoniker": "ligth.frag",
+              "ToolTip": "D:\\UNI-Memory-Musseum\\ligth.frag",
+              "RelativeToolTip": "ligth.frag",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-07T05:38:13.672Z",
               "IsPinned": true,
               "EditorCaption": ""
             },

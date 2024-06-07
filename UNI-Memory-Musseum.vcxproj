@@ -165,6 +165,7 @@
   <ItemGroup>
     <None Include="default.frag" />
     <None Include="default.vert" />
+    <None Include="ligth.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="cielo.jpeg" />
