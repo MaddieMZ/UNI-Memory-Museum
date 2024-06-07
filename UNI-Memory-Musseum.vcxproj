@@ -164,6 +164,11 @@
     <None Include="default.frag" />
     <None Include="default.vert" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="cielo.jpeg" />
+    <Image Include="ladrillo.jpg" />
+    <Image Include="yoshii.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

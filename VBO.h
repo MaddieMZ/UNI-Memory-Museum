@@ -2,19 +2,19 @@
 #define VBO_CLASS_H
 #include<glad/glad.h> 
 
-//Creamos una clase VBO
 class VBO
 {
 public:
-	//Asignamos un id
+	// Reference ID of the Vertex Buffer Object 
 	GLuint ID;
-	//Constructos que toma el arreglo de vertices, y el tamaño que utilizan
+	// Constructor that generates a Vertex Buffer Object and links it to vertices
 	VBO(GLfloat* vertices, GLsizeiptr size);
-	//Enlaza con el programa shader
-	void Bind(); 
-	//Desenlaza con el programa shader
+
+	// Binds the VBO 
+	void Bind();
+	// Unbinds the VBO 
 	void Unbind();
-	//Elimina el programa shader para ahorrar recursos
+	// Deletes the VBO 
 	void Delete();
 };
 

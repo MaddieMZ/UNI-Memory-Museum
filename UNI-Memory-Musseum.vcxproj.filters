@@ -16,6 +16,9 @@
     <Filter Include="Resource Files\shaders">
       <UniqueIdentifier>{083e16d8-63b6-4b14-9cb7-3cd274592204}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{a417c6cb-61a7-4f2d-b2ae-090243e8a04e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testFile.cpp">
@@ -70,5 +73,16 @@
     <None Include="default.frag">
       <Filter>Resource Files\shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ladrillo.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="cielo.jpeg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="yoshii.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

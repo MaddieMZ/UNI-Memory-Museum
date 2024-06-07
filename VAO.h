@@ -1,22 +1,22 @@
 #ifndef VAO_CLASS_H
 #define VAO_CLASS_H
-#include<glad/glad.h>
+#include<glad/glad.h> 
 #include"VBO.h"
 
-//Creamos una clase VAO 
 class VAO
 {
 public:
-	//Asignamos un id
-	GLuint ID; 
+	// ID reference for the Vertex Array Object
+	 GLuint ID;
+	// Constructor that generates a VAO ID 
 	VAO();
-	//Le asignamos un VBO para que se manejen los atributos de los vertices, el layout es el indice
-	void LinkVBO(VBO VBO, GLuint layout); 
-	//Activa el programa shader
+	// Links a VBO Attribute such as a position or color to the VAO
+	void LinkAttrib(VBO& VBO, GLuint layout, GLuint numComponents, GLenum type, GLsizeiptr stride, void* offset);
+	// Binds the VAO 
 	void Bind();
-	//Desactiva el programa shader
+	// Unbinds the VAO 
 	void Unbind();
-	//Elimina el programa shader para liberar recursos
+	// Deletes the VAO 
 	void Delete();
 };
 

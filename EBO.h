@@ -1,15 +1,21 @@
-#ifndef EBO_CLASS_H
+#ifndef EBO_CLASS_H 
 #define EBO_CLASS_H
 #include<glad/glad.h> 
-//Creamos una clase EBO
+
 class EBO
 {
 public:
-	//Le asignamos su id
+	// ID reference of Elements Buffer Object 
 	GLuint ID;
-	//En el constructor generamos el arreglo de indices y su tamaño
+	// Constructor that generates a Elements Buffer Object and links it to indices 
 	EBO(GLuint* indices, GLsizeiptr size);
-	void Bind(); void Unbind(); void Delete();
+
+	// Binds the EBO 
+	void Bind();
+	// Unbinds the EBO 
+	void Unbind();
+	// Deletes the EBO 
+	void Delete();
 };
 
-#endif 
+#endif
