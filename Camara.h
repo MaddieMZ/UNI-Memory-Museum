@@ -1,4 +1,3 @@
-#pragma once
 #define GLM_ENABLE_EXPERIMENTAL
 #ifndef CAMERA_CLASS_H
 #define CAMERA_CLASS_H
@@ -23,8 +22,8 @@ public:
 	int width;
 	int height;
 	// Adjust the speed of the camera and it's sensitivity when looking around
-	float speed = 0.1f;
-	float sensitivity = 100.0f;
+	float speed = 0.01f;
+	float sensitivity = 50.0f;
 	// Camera constructor to set up initial values
 	Camera(int width, int height, glm::vec3 position);
 	// Updates and exports the camera matrix to the Vertex Shader
