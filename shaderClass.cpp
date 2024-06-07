@@ -1,7 +1,4 @@
 #include"shaderClass.h"
-
-//Se utiliza para leer archivos y devolver el archivo en cadenna de caracteres
-
 std::string get_file_contents(const char* filename)
 {
 	std::ifstream in(filename, std::ios::binary);
@@ -18,7 +15,6 @@ std::string get_file_contents(const char* filename)
 	throw(errno);
 }
 //Procedemos a contruir el constructor de sombras
-//Se hace todo el proceso de compilacion y activacion de shader
 Shader::Shader(const char* vertexFile, const char* fragmentFile)
 {
 	std::string vertexCode = get_file_contents(vertexFile);
@@ -55,4 +51,4 @@ void Shader::Activate()
 void Shader::Delete()
 {
 	glUseProgram(ID);
-}
+}
