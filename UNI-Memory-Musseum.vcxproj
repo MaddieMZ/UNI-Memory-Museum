@@ -166,11 +166,12 @@
     <None Include="default.frag" />
     <None Include="default.vert" />
     <None Include="light.vert" />
-    <None Include="ligth.frag" />
+    <None Include="light.frag" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="cielo.jpeg" />
     <Image Include="ladrillo.jpg" />
+    <Image Include="pizza.png" />
     <Image Include="yoshii.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

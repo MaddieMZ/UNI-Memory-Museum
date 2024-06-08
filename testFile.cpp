@@ -5,14 +5,17 @@
 #include<glm/glm.hpp>
 #include<glm/gtc/matrix_transform.hpp>
 #include<glm/gtc/type_ptr.hpp>
+
 #include"Texture.h"
 #include"shaderClass.h"
 #include"VAO.h"
 #include"VBO.h"
 #include"EBO.h"
 #include"Camara.h"
+
 const unsigned int width = 800;
 const unsigned int height = 800;
+
 //Coordenadas de Vertices
 GLfloat vertices[] =
 { // COORDINATES / COLORS / TexCoord / NORMALS //
@@ -98,13 +101,13 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	// Create a GLFWwindow object of 800 by 800 pixels
 	GLFWwindow* window = glfwCreateWindow(width, height, "Incorporando la funcionalidad de la Camara en OpenGL", NULL, NULL);
-		// Error check if the window fails to create
-		if (window == NULL)
-		{
-			std::cout << "Failed to create GLFW window" << std::endl;
-			glfwTerminate();
-			return -1;
-		}
+	// Error check if the window fails to create
+	if (window == NULL)
+	{
+		std::cout << "Failed to create GLFW window" << std::endl;
+		glfwTerminate();
+		return -1;
+	}
 	// Introduce the window into the current context
 	glfwMakeContextCurrent(window);
 	//Load GLAD so it configures OpenGL
@@ -166,7 +169,7 @@ int main()
 	//Texture
 	int widthImg, heightImg, numColCh;
 	stbi_set_flip_vertically_on_load(true);
-	unsigned char* bytes = stbi_load("yoshii.png", &widthImg, &heightImg, &numColCh, 4);
+	unsigned char* bytes = stbi_load("pizza.png", &widthImg, &heightImg, &numColCh, 4);
 	//Texture dog("dog.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	//dog.texUnit(shaderProgram, "tex0", 0);
 	GLuint texture;
@@ -178,8 +181,7 @@ int main()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	//Para ubicar la textura 
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, widthImg, heightImg, 0, GL_RGBA,
-		GL_UNSIGNED_BYTE, bytes);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, widthImg, heightImg, 0, GL_RGBA, GL_UNSIGNED_BYTE, bytes);
 	//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 	glGenerateMipmap(GL_TEXTURE_2D);
 	//stbi_image_free(bytes);
@@ -234,24 +236,23 @@ int main()
 			//int projLoc = glGetUniformLocation(shaderProgram.ID, "proj");
 			//glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
 			// Assigns a value to the uniform
-			shaderProgram.Activate();
-			//Assigns a value to the uniform
-			//glUniform1f(uniID, 0.5f);
-			glBindTexture(GL_TEXTURE_2D, texture);
-			// Bind the VAO so OpenGL knows to use it
-			VAO1.Bind();
-			// Draw primitives, number of indices, datatype of indices, index of indices
-			glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT,
-				0);
-			lightShader.Activate();
-			camera.Matrix(lightShader, "camMatrix");
-			lightVAO.Bind();
-			glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int),
-				GL_UNSIGNED_INT, 0);
-			// Swap the back buffer with the front buffer
-			glfwSwapBuffers(window);
-			// Take care of all GLFW events
-			glfwPollEvents();
+		shaderProgram.Activate();
+		//Assigns a value to the uniform
+		//glUniform1f(uniID, 0.5f);
+		glBindTexture(GL_TEXTURE_2D, texture);
+		// Bind the VAO so OpenGL knows to use it
+		VAO1.Bind();
+		// Draw primitives, number of indices, datatype of indices, index of indices
+		glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
+		lightShader.Activate();
+		camera.Matrix(lightShader, "camMatrix");
+		lightVAO.Bind();
+		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int),
+			GL_UNSIGNED_INT, 0);
+		// Swap the back buffer with the front buffer
+		glfwSwapBuffers(window);
+		// Take care of all GLFW events
+		glfwPollEvents();
 	}
 	// Delete all the objects we've created
 	VAO1.Delete();

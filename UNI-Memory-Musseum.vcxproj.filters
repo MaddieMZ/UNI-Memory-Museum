@@ -79,7 +79,7 @@
     <None Include="default.frag">
       <Filter>Resource Files\shaders</Filter>
     </None>
-    <None Include="ligth.frag">
+    <None Include="light.frag">
       <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="light.vert">
@@ -94,6 +94,9 @@
       <Filter>Resource Files\textures</Filter>
     </Image>
     <Image Include="yoshii.png">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="pizza.png">
       <Filter>Resource Files\textures</Filter>
     </Image>
   </ItemGroup>
