@@ -1,2 +1,38 @@
-﻿  testFile.cpp
-  UNI-Memory-Musseum.vcxproj -> C:\Users\villa\OneDrive\Documentos\GitHub\UNI-Memory-Musseum\Debug\UNI-Memory-Musseum.exe
+﻿  Camara.cpp
+  EBO.cpp
+  shaderClass.cpp
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\shaderClass.cpp(10,27): warning C4244: 'argument': conversion from 'std::streamoff' to 'const unsigned int', possible loss of data
+  stb.cpp
+  testFile.cpp
+  testfile2.cpp
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\testfile2.cpp(96,59): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
+  Texture.cpp
+  VAO.cpp
+  VBO.cpp
+  Generating Code...
+  glad.c
+Camara.obj : error LNK2019: unresolved external symbol _glfwSetInputMode referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camara.obj : error LNK2019: unresolved external symbol _glfwGetKey referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camara.obj : error LNK2019: unresolved external symbol _glfwGetMouseButton referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camara.obj : error LNK2019: unresolved external symbol _glfwGetCursorPos referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+Camara.obj : error LNK2019: unresolved external symbol _glfwSetCursorPos referenced in function "public: void __thiscall Camera::Inputs(struct GLFWwindow *)" (?Inputs@Camera@@QAEXPAUGLFWwindow@@@Z)
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutInitWindowSize@8 referenced in function _main
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutInitDisplayMode@4 referenced in function _main
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutMainLoop@0 referenced in function _main
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutPostRedisplay@0 referenced in function "void __cdecl mouseMotion(int,int)" (?mouseMotion@@YAXHH@Z)
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutSwapBuffers@0 referenced in function "void __cdecl render(void)" (?render@@YAXXZ)
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutDisplayFunc@4 referenced in function _main
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutMouseFunc@4 referenced in function _main
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutMotionFunc@4 referenced in function "void __cdecl mouse(int,int,int,int)" (?mouse@@YAXHHHH@Z)
+testfile2.obj : error LNK2019: unresolved external symbol __imp__glutGet@4 referenced in function "void __cdecl mouseMotion(int,int)" (?mouseMotion@@YAXHH@Z)
+testfile2.obj : error LNK2019: unresolved external symbol __imp____glutInitWithExit@12 referenced in function _glutInit_ATEXIT_HACK@8
+testfile2.obj : error LNK2019: unresolved external symbol __imp____glutCreateWindowWithExit@8 referenced in function _glutCreateWindow_ATEXIT_HACK@4
+testfile2.obj : error LNK2019: unresolved external symbol "public: __thiscall Assimp::Importer::Importer(void)" (??0Importer@Assimp@@QAE@XZ) referenced in function "void __cdecl loadOBJ(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadOBJ@@YAXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+testfile2.obj : error LNK2019: unresolved external symbol "public: __thiscall Assimp::Importer::~Importer(void)" (??1Importer@Assimp@@QAE@XZ) referenced in function "void __cdecl loadOBJ(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadOBJ@@YAXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+testfile2.obj : error LNK2019: unresolved external symbol "public: struct aiScene const * __thiscall Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QAEPBUaiScene@@PBDI@Z) referenced in function "public: struct aiScene const * __thiscall Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QAEPBUaiScene@@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z)
+testfile2.obj : error LNK2019: unresolved external symbol "public: char const * __thiscall Assimp::Importer::GetErrorString(void)const " (?GetErrorString@Importer@Assimp@@QBEPBDXZ) referenced in function "void __cdecl loadOBJ(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadOBJ@@YAXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\Dependencias\GLUT\lib\x64\freeglut.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\Dependencias\ASSIMP\lib\x64\assimp-vc143-mt.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\Dependencias\GLEW\lib\Release\x64\glew32s.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\Dependencias\GLFW\lib-vc2022\glfw3.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\Debug\UNI-Memory-Musseum.exe : fatal error LNK1120: 20 unresolved externals

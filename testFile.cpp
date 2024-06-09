@@ -87,7 +87,7 @@ GLuint lightIndices[] =
 1, 4, 0,
 4, 5, 6,
 4, 6, 7
-};
+};/*
 int main()
 {
 	// Initialize GLFW
@@ -265,4 +265,4 @@ int main()
 	// Terminate GLFW before ending the program
 	glfwTerminate();
 	return 0;
-}
+}*/
