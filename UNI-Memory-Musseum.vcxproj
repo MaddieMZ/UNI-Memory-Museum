@@ -114,12 +114,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>GLEW_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencias\GLFW\include;$(SolutionDir)Dependencias\GLEW\include;$(SolutionDir)Dependencias\ASSIMP\Include;$(SolutionDir)Dependencias\;$(SolutionDir)Dependencias\GLUT\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencias\GLFW\include;$(SolutionDir)Dependencias\GLEW\include;$(SolutionDir)Dependencias\ASSIMP\assimp\Include;$(SolutionDir)Dependencias\;$(SolutionDir)Dependencias\GLUT\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)Dependencias\GLFW\lib-vc2022;$(SolutionDir)Dependencias\GLEW\lib\Release\x64;$(SolutionDir)Dependencias\ASSIMP\lib\x64;$(SolutionDir)Dependencias\GLUT\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencias\GLFW\lib-vc2022;$(SolutionDir)Dependencias\GLEW\lib\Release\x64;$(SolutionDir)Dependencias\ASSIMP\assimp\lib;$(SolutionDir)Dependencias\GLUT\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>freeglut.lib;assimp-vc143-mt.lib;glew32s.lib;glfw3.lib;opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

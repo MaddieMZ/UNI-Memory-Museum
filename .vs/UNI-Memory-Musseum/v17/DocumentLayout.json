@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\UNI-Memory-Musseum\\",
+  "WorkspaceRootPath": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|D:\\UNI-Memory-Musseum\\testFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\testfile2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|solutionrelative:testfile2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\testFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|solutionrelative:testFile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|D:\\UNI-Memory-Musseum\\shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|solutionrelative:shaderClass.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|D:\\UNI-Memory-Musseum\\light.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\light.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{326C0C40-93F5-414D-AE5A-BF133246971C}|UNI-Memory-Musseum.vcxproj|solutionrelative:light.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -22,53 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "testFile.cpp",
-              "DocumentMoniker": "D:\\UNI-Memory-Musseum\\testFile.cpp",
+              "DocumentMoniker": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\testFile.cpp",
               "RelativeDocumentMoniker": "testFile.cpp",
-              "ToolTip": "D:\\UNI-Memory-Musseum\\testFile.cpp",
+              "ToolTip": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\testFile.cpp",
               "RelativeToolTip": "testFile.cpp",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAAALcAAABjAAAA",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAiwAQBAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-03T14:31:29.621Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "light.frag",
-              "DocumentMoniker": "D:\\UNI-Memory-Musseum\\light.frag",
+              "DocumentMoniker": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\light.frag",
               "RelativeDocumentMoniker": "light.frag",
-              "ToolTip": "D:\\UNI-Memory-Musseum\\light.frag",
+              "ToolTip": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\light.frag",
               "RelativeToolTip": "light.frag",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-06-08T03:57:27.909Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "shaderClass.cpp",
-              "DocumentMoniker": "D:\\UNI-Memory-Musseum\\shaderClass.cpp",
+              "DocumentMoniker": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\shaderClass.cpp",
               "RelativeDocumentMoniker": "shaderClass.cpp",
-              "ToolTip": "D:\\UNI-Memory-Musseum\\shaderClass.cpp",
+              "ToolTip": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\shaderClass.cpp",
               "RelativeToolTip": "shaderClass.cpp",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-08T04:02:57.585Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "testfile2.cpp",
+              "DocumentMoniker": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\testfile2.cpp",
+              "RelativeDocumentMoniker": "testfile2.cpp",
+              "ToolTip": "C:\\Users\\sergi\\source\\repos\\UNI-Memory-Musseum\\testfile2.cpp",
+              "RelativeToolTip": "testfile2.cpp",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAH4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-10T04:09:41.262Z",
+              "EditorCaption": ""
             }
           ]
         }
