@@ -1,4 +1,0 @@
-﻿  testfile2.cpp
-D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\testfile2.cpp(85,55): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\testfile2.cpp(95,59): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
-  UNI-Memory-Musseum.vcxproj -> D:\Goku eta vaina e seria\proyectos\Memory Musseum\UNI-Memory-Musseum\x64\Debug\UNI-Memory-Musseum.exe
