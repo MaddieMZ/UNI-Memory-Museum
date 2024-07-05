@@ -1,0 +1,8 @@
+newmtl column:greek:SuperTemple:templeRender:templeRender:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd -s_0.5_0.5_-mm_0_0.630252_germany010.jpg
+bump  -bm 1 -s_0.5_0.5_germany010b.jpg
+Ni 1.00

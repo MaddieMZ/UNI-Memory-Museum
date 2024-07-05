@@ -11,6 +11,25 @@ class Texture:
         self.textures[2] = self.get_texture(path='texturas/letrero.png')
         self.textures['skybox'] = self.get_texture_cube(dir_path='texturas/skybox/', ext='png')
 
+        #expos
+        self.textures[3] = self.get_texture(path= 'texturas/1.jpg')
+        self.textures[4] = self.get_texture(path= 'texturas/2.jpg')
+        self.textures[5] = self.get_texture(path= 'texturas/3.jpg')
+        self.textures[6] = self.get_texture(path= 'texturas/4.jpg')
+        self.textures[7] = self.get_texture(path= 'texturas/5.jpg')
+        self.textures[8] = self.get_texture(path= 'texturas/6.jpg')
+        self.textures[9] = self.get_texture(path= 'texturas/7.jpg')
+        self.textures[16] = self.get_texture(path= 'texturas/8.jpg')
+
+        #letreros
+        self.textures[14] = self.get_texture(path= 'texturas/letrero2.png')
+        self.textures[15] = self.get_texture(path= 'texturas/letrero3.png')    
+        self.textures[10] = self.get_texture(path= 'texturas/letrero4.png')
+        self.textures[11] = self.get_texture(path= 'texturas/letrero5.png')    
+        self.textures[12] = self.get_texture(path= 'texturas/letrero6.png')
+        self.textures[13] = self.get_texture(path= 'texturas/letrero7.png')
+        self.textures[17] = self.get_texture(path= 'texturas/letrero8.png')    
+
     def get_texture_cube(self, dir_path, ext='png'):
         faces = ['right', 'left', 'top', 'bot'] + ['front', 'back'][::-1]
         textures = []

@@ -67,7 +67,7 @@ class Cubo(BaseModelPompeado):
         super().__init__(app, vao_name, tex_id, pos, rot, escala)
 
 class Quad(BaseModelPompeado):
-    def __init__(self, app, vao_name='quad', tex_id=2, pos=(0, 0, 0), rot=(0, 0, 0), escala=(2, 2, 2)):
+    def __init__(self, app, vao_name='quad', tex_id=0, pos=(0, 0, 0), rot=(0, 0, 0), escala=(2, 2, 2)):
         super().__init__(app, vao_name, tex_id, pos, rot, escala)
 
 class Pilar(BaseModelPompeado):
